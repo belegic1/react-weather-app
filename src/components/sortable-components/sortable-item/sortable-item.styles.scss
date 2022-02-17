@@ -1,0 +1,85 @@
+.widget {
+  padding: 1.6rem 3rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  align-items: center;
+  text-align: center;
+  border-radius: 1.5rem;
+  color: aliceblue;
+  margin: auto auto;
+  align-self: start;
+  min-width: 18rem;
+
+  @media (min-width: 667px) {
+  }
+
+  .current_temperature {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+
+  .city_name,
+  .current_condition {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+  .city_name {
+    display: block;
+  }
+  .icon {
+    font-size: 5rem;
+  }
+
+  .widget-header {
+    .hidde_dropdown {
+      color: #000000;
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .dropdown {
+      display: none;
+
+      .show_more {
+        color: black;
+        font-size: 1.2rem;
+      }
+    }
+
+    .show_dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.897);
+      box-shadow: 0 0 28px rgba($color: #000000, $alpha: 0.5);
+      padding: 1.6rem;
+    }
+
+    .hidde_buttons {
+      display: none;
+    }
+
+    button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 2rem;
+      float: right;
+      margin-right: 0;
+    }
+  }
+
+  .additional_info {
+    display: flex;
+    justify-content: space-between;
+
+    .info_span {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

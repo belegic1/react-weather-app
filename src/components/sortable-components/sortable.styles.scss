@@ -1,0 +1,42 @@
+.search {
+  margin-top: 5rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 6rem;
+  width: 100vw;
+
+  input {
+    border: none;
+    color: #777;
+    width: 70vw;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .serach_popup {
+    width: 70vw;
+    overflow: hidden;
+    border: 30px;
+  }
+
+  .pick_city {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    text-align: start;
+    color: #777;
+  }
+
+  .pick_city:hover {
+    background-color: transparent;
+    color: aliceblue;
+  }
+}
