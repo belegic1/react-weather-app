@@ -42,6 +42,9 @@ const SortableComponent = () => {
   };
   const handleInput = (e) => setQuery(e.target.value);
 
+  
+
+
   return (
     <div>
       <div className="search">
