@@ -7,8 +7,8 @@ import { AiFillCheckCircle } from 'react-icons/ai';
 import './sortable-item.styles.scss';
 import { timeConverter } from '../../../assets/timeConverter';
 import Loading from './load-icon-png-7957.png';
-
 import ErrorMessage from '../../error/error.component';
+import PropTypes from 'prop-types';
 
 const WEATHER_API_KEY = '4a95703108e8a4ccddd62d3387e927fd';
 
@@ -137,9 +137,6 @@ const SortableItem = SortableElement(({ city, remove }) => {
           src={`https://openweathermap.org/img/w/${icon}.png`}
           alt=""
         />
-        {/* <div>
-                <BsCloudRainHeavy  className='icon'/>
-            </div> */}
         <h5 className="current_condition">{condition}</h5>
       </div>
       <div className="widget-footer">
@@ -163,8 +160,6 @@ const SortableItem = SortableElement(({ city, remove }) => {
             </div>
           </>
         )}
-        {/* /////////////////////////////////////////////////////////////////////// */}
-
         {showSunsetSunrise && (
           <>
             <div className="additional_info">
@@ -179,8 +174,6 @@ const SortableItem = SortableElement(({ city, remove }) => {
             </div>
           </>
         )}
-        {/* /////////////////////////////////////////////////////////////////////// */}
-
         {showWindSped && (
           <>
             <div className="additional_info">
@@ -189,7 +182,6 @@ const SortableItem = SortableElement(({ city, remove }) => {
             </div>
           </>
         )}
-        {/* /////////////////////////////////////////////////////////////////////// */}
       </div>
     </div>
   ) : (
@@ -198,5 +190,10 @@ const SortableItem = SortableElement(({ city, remove }) => {
     </div>
   );
 });
+
+SortableItem.propTypes = {
+  city: PropTypes.arrayOf(PropTypes.number),
+  remove: PropTypes.func
+}
 
 export default SortableItem;
